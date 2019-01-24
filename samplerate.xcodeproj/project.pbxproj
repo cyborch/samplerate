@@ -167,7 +167,7 @@
 		C04615252114E44700A160D7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0940;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Reactify;
 				TargetAttributes = {
 					C046152C2114E44700A160D7 = {
