@@ -139,6 +139,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C04615362114E44700A160D7 /* Build configuration list for PBXNativeTarget "libsamplerate" */;
 			buildPhases = (
+				F234E58421F9E9970056A07F /* ShellScript */,
 				C04615292114E44700A160D7 /* Sources */,
 				C046152A2114E44700A160D7 /* Frameworks */,
 				C046152B2114E44700A160D7 /* CopyFiles */,
@@ -157,6 +158,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0D6D63221171A2A000B1ED1 /* Build configuration list for PBXNativeTarget "samplerate" */;
 			buildPhases = (
+				F234E58521F9E9FB0056A07F /* ShellScript */,
 				C0D6D62821171A2A000B1ED1 /* Sources */,
 				C0D6D62921171A2A000B1ED1 /* Frameworks */,
 				C0D6D62A21171A2A000B1ED1 /* Headers */,
@@ -215,6 +217,44 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F234E58421F9E9970056A07F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if ! grep -q \"Converter.h\" < libsamplerate/src/samplerate.h ; then\ncat << EOF >> libsamplerate/src/samplerate.h\n#ifdef __OBJC__\n#import \"Converter.h\"\n#endif\nEOF\nfi\n";
+		};
+		F234E58521F9E9FB0056A07F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if ! grep -q \"Converter.h\" < libsamplerate/src/samplerate.h ; then\ncat << EOF >> libsamplerate/src/samplerate.h\n#ifdef __OBJC__\n#import \"Converter.h\"\n#endif\nEOF\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C04615292114E44700A160D7 /* Sources */ = {
